@@ -22,7 +22,7 @@ using namespace std;
             2,
             "Telor",
             90,
-            45000,
+            20000,
             "16 telor = 1 kg"
         },
         {
@@ -44,18 +44,17 @@ using namespace std;
             "Garam",
             3,
             12500,
-            "1 garam = 1kg"
+            "1 garam = 1 kg"
         }
     };
 
 void prosesPembelian (const BahanMakanan bahan) {
 
-} 
+}
 
 int main() {
     string nama_pembeli;
     int nomor_bahan, uang_bayar, jumlah_bahan;
-
     cout << "=====DAFTAR BAHAN MAKANAN=====" << endl;
    for (int i = 0; i < 5; i++) {
     cout << i + 1 << ". " << daftarBahan[i].nama << "\n";
@@ -63,20 +62,25 @@ int main() {
     cout << "Pilih Bahan Makanan ?" << endl;
     cin >> nomor_bahan;
 
-// cout << "Masukkan Nama Pembeli" << endl;
-// cin >> nama_pembeli;
-// cout << "Pilih Nomor Bahan" << endl;
-// cin >> nomor_bahan;
-// cout << "Masukkan Jumlah Bahan" << endl;
-// cin >> jumlah_bahan;
-// cout << "Masukkan Jumlah Bayar" << endl;
-// cin >> uang_bayar;
+cout << "Masukkan Nama Pembeli" << endl;
+cin >> nama_pembeli;
+cout << "Pilih Nomor Bahan" << endl;
+cin >> nomor_bahan;
+cout << "Masukkan Jumlah Bahan" << endl;
+cin >> jumlah_bahan;
+cout << "Masukkan Jumlah Bayar" << endl;
+cin >> uang_bayar;
 
-
-    if (nomor_bahan > 0 && nomor_bahan <= 5) {
-        prosesPembelian (daftarBahan[nomor_bahan-1]);
+    if (nomor_bahan == 1){
+        cout << "Tepung per kg = 12000 jadi total kembalian Anda sebesar RP. " << uang_bayar-(12000*jumlah_bahan) << endl;
+    } else if (nomor_bahan == 2){
+        cout << "Telor per kg = 16 butir 20000 jadi total kembalian Anda sebesar RP. " << uang_bayar-(20000*jumlah_bahan) << endl;
+    } else if (nomor_bahan == 3){
+        cout << "Mentega per kg = 12000 jadi total kembalian Anda sebesar RP. " << uang_bayar-(12000*jumlah_bahan) << endl;
+    } else if (nomor_bahan == 4){
+        cout << "Gula per kg = 14500 jadi total kembalian Anda sebesar RP. " << uang_bayar-(14500*jumlah_bahan) << endl;
+    } else if (nomor_bahan == 5){
+        cout << "Garam per kg = 12500 jadi total kembalian Anda sebesar RP. " << uang_bayar-(12500*jumlah_bahan) << endl;
     }
-} 
 
-
-
+}
